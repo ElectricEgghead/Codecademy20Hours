@@ -8,11 +8,12 @@ double earthWeight;
 double nonEarthWeight;
 int planetNumber;
   
-std::cout << "Hello, Little Mac. \n\nWelcome to INTERPLANETARY WEIGHT TRACKER!\n";
+std::cout << "Hello, Little Mac. \n\nWelcome to INTERPLANETARY WEIGHT TRACKER!\n\n";
 std::cout << "Enter your weight on Earth: ";
 std::cin >> earthWeight;
 std::cout << "Your weight on Earth is " << earthWeight << " pounds.\n";
 std::cout << "\n----------\n1 - Venus\n2 - Mars\n3 - Jupiter\n4 - Saturn\n5 - Uranus\n6 - Neptune\n---------\n\n";
+do {
 std::cout << "Enter the number of the planet you want to fight on [1-6]: ";
 std::cin >> planetNumber;
 std::cout << "\n";
@@ -48,6 +49,8 @@ switch(planetNumber){
     break;
    
 } // end switch
+} while (planetNumber < 1 || planetNumber > 6);
+
   std::cout << "\nThank you for using INTERPLANETARY WEIGHT TRACKER. \n\nGood luck with your fights!";
  
 }
