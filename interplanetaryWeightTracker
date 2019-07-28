@@ -21,27 +21,27 @@ switch(planetNumber){
     
   case 1 :
     nonEarthWeight = earthWeight * 0.78;
-    std::cout << "On Venus, your weight is: " << nonEarthWeight << "\n";
+    std::cout << "On Venus, your weight is " << nonEarthWeight << "\n";
     break;
   case 2 :
     nonEarthWeight = earthWeight * 0.39;
-    std::cout << "On Mars, your weight is: " << nonEarthWeight << "\n";
+    std::cout << "On Mars, your weight is " << nonEarthWeight << "\n";
     break;
   case 3 :
     nonEarthWeight = earthWeight * 2.65;
-    std::cout << "On Jupiter, your weight is: " << nonEarthWeight << "\n";
+    std::cout << "On Jupiter, your weight is " << nonEarthWeight << "\n";
     break;
   case 4 :
     nonEarthWeight = earthWeight * 1.17;
-    std::cout << "On Saturn, your weight is: " << nonEarthWeight << "\n";
+    std::cout << "On Saturn, your weight is " << nonEarthWeight << "\n";
     break;
   case 5 :
     nonEarthWeight = earthWeight * 1.05;
-    std::cout << "On Uranus, your weight is: " << nonEarthWeight << "\n";
+    std::cout << "On Uranus, your weight is " << nonEarthWeight << "\n";
     break;
   case 6 :
     nonEarthWeight = earthWeight * 1.23;
-    std::cout << "On Neptune, your weight is: " << nonEarthWeight << "\n";
+    std::cout << "On Neptune, your weight is " << nonEarthWeight << "\n";
     break;
   default:
     std::cout << "Invalid entry. Enter a planet number from 1 - 6." << "\n";
