@@ -2,28 +2,31 @@
 #include <string>
 
 std::string userName;
+std::string userChoice;
 int userYear;
 
 int main() {
   
-  std::cout << "Welcome to the premier LEAP YEAR CALCULATOR!\n\n";
+        std::cout << "****** Welcome to the premier LEAP YEAR CALCULATOR! *******\n\n";
   
-  std::cout << "What's your first name? ";
-  std::cin >> userName;
-  std::cout << "\nAre you ready to become a Leap Year Wizard, " << userName << "?\n";
-  do{
-    std::cout << "\nWe know every leap year that has ever existed. \n\nEnter a four-digit year and you, too, can know many, many leap years. [ex. 2098]: ";
-  std::cin >> userYear;
-  if(userYear > 999 && userYear < 10000){
-     if(userYear % 4 == 0 && userYear % 100 == 0 && userYear % 400 == 0){
-       std::cout << "This year, " << userYear << " is a LEAP YEAR!" << "\nIf this is the year you were born, you get four cookies!";
+        std::cout << "What's your first name? ";
+        std::cin >> userName;
+        std::cout << "\nAre you ready to become a Leap Year Wizard, " << userName << "?\n";
+        std::cout << "\nWe know every leap year that has ever existed." << "\n";
+        do {
+            std::cout << "\nEnter a four-digit year and you, too, can know many, many leap years. [ex. 2098]: ";
+        std::cin >> userYear;
+        if(userYear > 999 && userYear < 10000 && userYear % 4 == 0 && userYear % 100 == 0 && userYear % 400 == 0){
+            {
+                std::cout << "\nThis year," << userYear << ", is a LEAP YEAR!" << "\n\nIf this is the year you were born, you get four cookies!";
 
      } // end if for calculations
-  }
-  else{
-    std::cout << "Enter a four-digit year [ex. 2098], so you can be a Leap Year Wizard: ";
-    
-  }
-  } while (userYear != 0); // end do-while
+        }
+     else{
+         std::cout << userYear << " is NOT a leap year" << "\n";
+         std::cout << "Do you want to enter another year [y/n]?: ";
+         std::cin >> userChoice;
+  } // end else for calculations
+  } while (userChoice == "Y" || userChoice == "y"); // end do-while
    
 }
