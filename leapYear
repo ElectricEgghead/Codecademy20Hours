@@ -2,8 +2,9 @@
 #include <string>
 
 std::string userName;
-std::string userChoice;
+std::string userChoiceVar;
 int userYear;
+void userChoice();
 
 int main() {
   
@@ -18,15 +19,21 @@ int main() {
         std::cin >> userYear;
         if(userYear > 999 && userYear < 10000 && userYear % 4 == 0 && userYear % 100 == 0 && userYear % 400 == 0){
             {
-                std::cout << "\nThis year," << userYear << ", is a LEAP YEAR!" << "\n\nIf this is the year you were born, you get four cookies!";
+                std::cout << userYear << " is a LEAP YEAR!" << "\n\nIf this is the year you were born, you get four cookies!";
 
      } // end if for calculations
         }
      else{
          std::cout << userYear << " is NOT a leap year" << "\n";
-         std::cout << "Do you want to enter another year [y/n]?: ";
-         std::cin >> userChoice;
+         userChoice();
+         
   } // end else for calculations
-  } while (userChoice == "Y" || userChoice == "y"); // end do-while
+  } while (userChoiceVar == "Y" || userChoiceVar == "y"); // end do-while
    
 }
+
+void userChoice(){
+    std::cout << "Do you want to enter another year [y/n]?: ";
+    std::cin >> userChoiceVar;
+    
+} // end userChoice function
