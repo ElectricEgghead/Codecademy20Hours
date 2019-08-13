@@ -13,18 +13,19 @@ int main() {
         std::cout << "What's your first name? ";
         std::cin >> userName;
         std::cout << "\nAre you ready to become a Leap Year Wizard, " << userName << "?\n";
-        std::cout << "\nWe know every leap year that has ever existed." << "\n";
+        std::cout << "\nWe can help! We know every leap year that has ever existed." << "\n";
         do {
             std::cout << "\nEnter a four-digit year and you, too, can know many, many leap years. [ex. 2098]: ";
         std::cin >> userYear;
         if(userYear > 999 && userYear < 10000 && userYear % 4 == 0 && userYear % 100 == 0 && userYear % 400 == 0){
             {
-                std::cout << userYear << " is a LEAP YEAR!" << "\n\nIf this is the year you were born, you get four cookies!";
+                std::cout << userYear << " is a LEAP YEAR!" << "\n\nYou get four cookies!" << "\n";
+                userChoice();
 
      } // end if for calculations
         }
      else{
-         std::cout << userYear << " is NOT a leap year" << "\n";
+         std::cout << userYear << " is NOT a leap year." << "\n";
          userChoice();
          
   } // end else for calculations
